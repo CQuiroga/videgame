@@ -17,8 +17,16 @@
     {!! Form::label('name', 'Nombre juego:') !!}
     {!! Form::text('name', null , ['placeholder'=> 'digita el nombre']) !!}
     <br>
-    {!! Form::label('categoria', 'Categoría') !!}
+    @error('name')
+        <strong style="color: brown">{{ $message}}</strong>
+    @enderror
+    <br>
+    {!! Form::label('category_id', 'Categoría') !!}
     {!! Form::select('category_id', $categories, null) !!}
+    <br>
+    @error('category_id')
+        <strong style="color: brown">{{ $message}}</strong>
+    @enderror
     <br>
     {!! Form::submit('Crear') !!}
 

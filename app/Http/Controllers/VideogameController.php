@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Videogame;
 use App\Models\Category;
+use App\Http\Requests\StoreVideoGame;
+
 class VideogameController extends Controller
 {
     /**
@@ -36,8 +38,14 @@ class VideogameController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(StoreVideoGame $request)
+    {   
+
+        /* $request->validate([
+            'name' => 'required',
+            'category_id' => 'required'
+        ]); */
+
         $request = Videogame::create($request->all());  
 
         return redirect()->route('videogames.index');

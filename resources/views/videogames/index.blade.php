@@ -28,6 +28,7 @@
             <th>Nombre</th>
             <th>Cateoría</th>
             <th>Creado</th>
+            <th>Estado</th>
             <th colspan="4">Acciones</th>
         </thead>
         <tbody>
@@ -43,8 +44,9 @@
 
                 
                 @endforeach
-                </td>
+            </td>
             <td>{{$videogame->created_at}}</td>
+            <td>{{$videogame->active}}</td>
             <td>
                 <a href="{{ route('videogames.show', $videogame)}}">Ver</a>
             </td>
