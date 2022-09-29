@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h3>Editar videojuego {{$videogames->name}}</h3>
+    <h3>Editar videojuego {{$videogame->name}}</h3>
     
     <hr>
     <a href="{{ route('videogames.index')}}">Regresar</a>

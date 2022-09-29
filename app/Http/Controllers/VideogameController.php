@@ -88,7 +88,7 @@ class VideogameController extends Controller
     {
         $videogame->update($request->all());
 
-        return redirect()->route('videogames.show', $videogame->id);
+        return redirect()->route('videogames.show', $videogame);
 
     }
 

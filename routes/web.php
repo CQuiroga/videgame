@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideogameController;
+use App\Http\Controllers\CategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +21,7 @@ Route::get('/', function () {
 
 Route::resource('videogames', VideogameController::class)->names('videogames');
 
-Route::get('videogames/{name_game}/{categoria?}', [VideogameController::class, 'help']);
+Route::resource('categories', CategoryController::class)->names('categories');
+
+
+//Route::get('videogames/{name_game}/{categoria?}', [VideogameController::class, 'help']);
